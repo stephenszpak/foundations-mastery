@@ -9,6 +9,7 @@ namespace FoundationsMasteryTests
         [TestMethod]
         public void EnsureICanCreateAnInstance()
         {
+
         }
 
         [TestMethod]
