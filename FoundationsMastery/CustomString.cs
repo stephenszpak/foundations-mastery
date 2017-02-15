@@ -9,7 +9,7 @@ namespace FoundationsMastery
 {
     public class CustomString
     {
-        public char[] myChar;
+        private char[] myChar;
 
         public CustomString()
         {
@@ -37,10 +37,7 @@ namespace FoundationsMastery
             this.myChar = null;
         }
 
-        public string Concat(IEnumerable<char> myChar)
-        {
-            return String.Concat(myChar);
-        }
+       
 
         //public string Interleave(IEnumerable<char> rhs)
         //{
