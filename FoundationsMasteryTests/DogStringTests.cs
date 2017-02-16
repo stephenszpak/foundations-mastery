@@ -27,5 +27,18 @@ namespace FoundationsMasteryTests
 
             Assert.AreEqual(expectedResult,actualResult);
         }
+
+        [TestMethod]
+        public void CheckToSeeIfInterleaving()
+        {
+            char[] myDog = new char[] { 'a', 'b', 'c', 'd', 'e', 'f' };
+            DogStrings doggie = new DogStrings(myDog);
+            char[] numOfDogs = new char[] { '1', '2', '3', '4', '5', '6'};
+
+            string expectedResult = "a1b2c3d4e5f6";
+            string actualResult = doggie.Interleave(numOfDogs);
+
+            Assert.AreEqual(expectedResult, actualResult);
+        }
     }
 }

@@ -24,7 +24,7 @@ namespace FoundationsMastery
             }
         }
 
-        public void Clear()
+        public virtual void Clear()
         {
             this.Contents = null;
         }
@@ -37,23 +37,20 @@ namespace FoundationsMastery
 
         public string Interleave(IEnumerable<char> rhs)
         {
-            //string contentInput = new string(rhs.ToArray());
-            string firstString = "";
-            string secondString = "";
-            int counter = 0;
-
-            foreach(char Contents in firstString)
+            string result = "";
+            //zip method to interleave
+            var interleaveMe = Contents.Zip(rhs, (first, second) => first + "" + second);
+            
+            foreach (var item in interleaveMe)
             {
-                secondString = secondString.Insert(counter, Contents.ToString());
-                counter = counter + 2;
+                result += item;
             }
-            return secondString;
-
+                return result;
         }
 
         public string Print()
         {
-            throw new NotImplementedException();
+            return String.Concat(Contents);
         }
     }
 }

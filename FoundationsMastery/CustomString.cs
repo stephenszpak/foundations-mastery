@@ -32,21 +32,9 @@ namespace FoundationsMastery
             return convertedCharToString;
         }
 
-        public void Clear()
+        public virtual void Clear()
         {
             this.myChar = null;
         }
-
-       
-
-        //public string Interleave(IEnumerable<char> rhs)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //public string Print()
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }
