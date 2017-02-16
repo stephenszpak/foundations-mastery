@@ -83,7 +83,7 @@ namespace FoundationsMasteryTests
         {
             char[] myCat = new char[] { 'a', 'b', 'd' };
             CatStrings kitty = new CatStrings(myCat);
-
+      
             Assert.IsInstanceOfType(kitty.Contents, typeof(char[]));
             Assert.AreEqual(3, kitty.Length);
         }
